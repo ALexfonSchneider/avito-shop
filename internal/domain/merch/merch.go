@@ -17,7 +17,7 @@ func NewMerch(Name string, Description string, Price int64) *Merch {
 
 func (m *Merch) Validate(merch Merch) error {
 	if merch.Price <= 0 {
-		return MerchPriceMustBeGratenThenZero
+		return MerchPriceMustBeGreaterThenZero
 	}
 
 	return nil

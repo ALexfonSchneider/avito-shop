@@ -16,10 +16,10 @@ type Purchase struct {
 
 func (p *Purchase) Validate() error {
 	if p.Amount < 0 {
-		return MerchAmountMustBePositive
+		return PurchaseAmountMustBePositive
 	}
 	if p.Quantity <= 0 {
-		return MerchQuantityMustBeGratenThenZero
+		return PurchaseQuantityMustBeGreaterThenZero
 	}
 
 	return nil
