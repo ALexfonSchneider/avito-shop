@@ -1,20 +1,25 @@
 package user
 
-import "github.com/google/uuid"
+import (
+	"github.com/google/uuid"
+	"time"
+)
 
 type User struct {
-	Id       string
-	Name     string
-	Password string
-	Balance  int64
+	ID        string
+	Username  string
+	Password  string
+	Balance   int64
+	CreatedAt time.Time
 }
 
-func NewUser(name string, password string, balance int64) *User {
+func NewUser(name string, password string, balance int64, createdAt time.Time) *User {
 	return &User{
-		Id:       uuid.NewString(),
-		Name:     name,
-		Password: password,
-		Balance:  balance,
+		ID:        uuid.NewString(),
+		Username:  name,
+		Password:  password,
+		Balance:   balance,
+		CreatedAt: createdAt,
 	}
 }
 
