@@ -1,0 +1,12 @@
+postgres:
+  host: postgres-tests
+  port: 5432
+  user: postgres
+  password: password
+  database: shop_test
+  poolSize: 20
+auth:
+  secretKey: "fchg678q314fgia7uywe7rfg798i5q"
+app:
+  host: "localhost"
+  port: 8080
